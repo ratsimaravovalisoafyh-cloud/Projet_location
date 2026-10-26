@@ -1,0 +1,3 @@
+D:\baba\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\locationVoitures.dir/objects.a
+D:\baba\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\locationVoitures.dir/objects.a @CMakeFiles\locationVoitures.dir\objects1.rsp
+D:\baba\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\locationVoitures.dir/objects.a -Wl,--no-whole-archive -o locationVoitures.exe -Wl,--out-implib,liblocationVoitures.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\locationVoitures.dir\linkLibs.rsp
