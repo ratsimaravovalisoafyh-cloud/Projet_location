@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/favoris.png</file>
+        <file>images/favoris2.png</file>
+        <file>style.qss</file>
+        <file>images/logo.png</file>
+        <file>images/icons-car-80.png</file>
+        <file>images/icons-group-80.png</file>
+        <file>images/icons-schedule-80.png</file>
+        <file>images/icons-analytics-80.png</file>
+        <file>images/notif.png</file>
+        <file>images/profil.png</file>
+        <file>images/addcircle.png</file>
+        <file>images/search.png</file>
+        <file>images/fleche_bas.png</file>
+        <file>images/fleche_haut.png</file>
+        <file>images/BMW serie 7 black.jpg</file>
+        <file>images/BMW serie 7 white.jpg</file>
+        <file>images/ford mustang.jpg</file>
+        <file>images/mercedes benz berline.jpg</file>
+        <file>images/porsche Cayenne.jpg</file>
+        <file>images/range rover.jpg</file>
+        <file>images/ferrari.jpg</file>
+        <file>images/toyotahilux.png</file>
+        <file>images/hyundaitucson .png</file>
+        <file>images/toyotacorolla.png</file>
+        <file>images/renaultclio.png</file>
+        <file>images/renaultduster.png</file>
+        <file>images/Hyundai i10 .png</file>
+        <file>images/ford mustang.png</file>
+    </qresource>
+</RCC>

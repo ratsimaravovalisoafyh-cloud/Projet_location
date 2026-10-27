@@ -1,0 +1,492 @@
+/* Palette : fond #d6e9fd | bleu foncé #1e4069 | boutons #35649b
+             carte #f4f9fc | bleu clair #b4d6fc #c8e1fb*/
+
+#centrale {
+background: #d6e9fd;
+}
+
+QScrollArea {
+background: transparent;
+border: none;
+}
+
+QScrollArea > QWidget > QWidget {
+background: transparent;
+}
+
+/* header */
+
+#header{
+background : #c8e1fb;
+}
+
+#header QLabel {
+
+color:#1e4069;
+font-size: 18px;
+font-weight: 600;
+background: transparent;
+
+}
+
+#boutonAjouter{
+background: #35649b;
+color: white;
+border: none;
+border-radius: 16px;
+padding: 8px 18px;
+font-size: 12px;
+font-weight: 600;
+}
+
+#boutonAjouter:hover{
+background: #2c5486;
+}
+
+/*barre de recherche et tri*/
+#barre QComboBox::drop-down {
+    border: none;
+    width: 30px;
+    background: transparent;
+}
+#barre QComboBox::down-arrow {
+    image: url(://images/fleche_bas.png);
+    width: 12px;
+    height: 12px;
+}
+#barre{
+background: transparent;
+}
+
+#barre QLineEdit, #barre QComboBox {
+background: #edf6ff;
+border: 1px solid #b4d6fc;
+border-radius: 14px;
+padding: 8px 14px;
+color: #1e4069;
+}
+
+#barre QLineEdit {
+    placeholder-text-color: #6d8fb5;
+    padding-left: 8px;
+}
+
+#barre QComboBox {
+min-width: 130px;
+}
+
+#barre QComboBox QAbstractItemView{
+background: #f4f9fc;
+color: #1e4069;
+selection-background-color: #b4d6fc;
+selection-color: #1e4069;
+}
+
+/* panneau filtre */
+#sidebar{
+background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #254f7f, stop:1 #1e4069);
+border-radius: 20px;
+}
+
+#sidebar QLabel{
+color: #dce9f8;
+background: transparent;
+font-size: 13px;
+}
+
+#sidebar #titreFiltres{
+color: white;
+font-size: 18px;
+font-weight: 600;
+}
+
+#boutonReinit{
+background: transparent;
+border: none;
+color: #9dc7f7;
+font-size: 13px;
+}
+
+#boutonReinit:hover{
+color: white;
+}
+
+/* pastilles pour toutes automatique et manuelle */
+#pastille{
+border: 1px solid #9dc7f7;
+border-radius: 10px;
+padding: 7px 0px;
+font-size: 11px;
+color: #dce9f8;
+background: transparent;
+min-width: 0px;
+}
+
+#pastille:checked {
+background: #9dc7f7;
+color: #1e4069;
+}
+
+/*case des marques */
+#sidebar QCheckBox{
+color: #dce9f8;
+background: transparent;
+spacing: 8px;
+}
+
+#sidebar QCheckBox::indicator{
+width: 16px;
+height: 16px;
+border: 1px solid #9dc7f7;
+border-radius: 4px;
+background: transparent;
+}
+
+#sidebar QCheckBox::indicator:checked{
+ background: #9dc7f7;
+}
+
+/* Champs de prix */
+#sidebar QSpinBox {
+    background: #edf6ff;
+    color: #1e4069;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 34px 6px 10px;
+}
+#sidebar QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: top right;
+    width: 26px;
+    border: none;
+    background: transparent;
+    border-top-right-radius: 10px;
+}
+#sidebar QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: bottom right;
+    width: 26px;
+    border: none;
+    background: transparent;
+    border-bottom-right-radius: 10px;
+}
+#sidebar QSpinBox::up-button:hover,
+#sidebar QSpinBox::down-button:hover {
+    background: #b4d6fc;
+}
+#sidebar QSpinBox::up-arrow {
+    image: url(://images/fleche_haut.png);
+    width: 12px;
+    height: 12px;
+}
+#sidebar QSpinBox::down-arrow {
+    image: url(://images/fleche_bas.png);
+    width: 12px;
+    height: 12px;
+}
+
+/*bouton valider */
+#boutonValider{
+background: #b4d6fc;
+color: #1e4069;
+border: none;
+border-radius: 10px;
+padding: 8px;
+font-weight: 600;
+}
+
+#boutonValider:hover{
+background: #9dc7f7;
+}
+
+/* cartes */
+#carte {
+background: #f4f9fc;
+border-radius: 16px;
+}
+
+#carte QLabel {
+background:transparent;
+color: #1e4069;
+}
+
+#carteNom {
+font-size: 15px;
+font-weight: 700;
+}
+
+#carteType{
+font-size: 11px;
+color: #6d8fb5;
+}
+
+#carteImmat{
+font-size: 11px;
+color:  #6d8fb5;
+}
+
+#cartePrix{
+font-size: 13px;
+font-weight: 700;
+}
+
+#carteImage {
+    background: #ffffff;
+    border-radius: 12px;
+    color: #6d8fb5;
+}
+
+/* coeur favoris */
+#boutonFavori {
+background: #1c3657;
+border: none;
+border-radius: 16px;
+}
+
+/* bouton modifier et supprimer */
+#boutonModifier {
+background: transparent;
+border: 1px solid #b4d6fc;
+border-radius: 12px;
+padding: 5px 14px;
+font-size: 11px;
+color: #1e4069;
+}
+
+#boutonModifier:hover{
+background: #e3f0fd;
+}
+
+#boutonSupprimer{
+background: #35649b;
+border: none;
+border-radius: 12px;
+padding: 5px 14px;
+font-size: 11px;
+font-weight: 600;
+color: white;
+}
+
+#boutonSupprimer:hover{
+background: #2c5486;
+}
+
+/* formulaire */
+#dialogVoiture {
+    background: #d6e9fd;
+}
+
+#dialogVoiture QLabel {
+    color: #1e4069;
+    background: transparent;
+    font-size: 13px;
+}
+
+#dialogVoiture QLineEdit,
+#dialogVoiture QComboBox,
+#dialogVoiture QSpinBox {
+    background: #edf6ff;
+    border: 1px solid #b4d6fc;
+    border-radius: 10px;
+    padding: 6px 10px;
+    color: #1e4069;
+}
+
+#dialogVoiture QLineEdit:focus,
+#dialogVoiture QComboBox:focus,
+#dialogVoiture QSpinBox:focus {
+    border: 1px solid #35649b;
+}
+
+#dialogVoiture QComboBox QAbstractItemView {
+    background: #f4f9fc;
+    color: #1e4069;
+    selection-background-color: #b4d6fc;
+    selection-color: #1e4069;
+}
+
+/* boutons ok et annuler */
+#dialogVoiture QPushButton {
+    background: #35649b;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 7px 18px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#dialogVoiture QPushButton:hover {
+    background: #2c5486;
+}
+
+/* Barre de navigation  */
+#navbar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #254f7f, stop:1 #1e4069);
+}
+
+#navLogo {
+    background: #dce9f8;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+#navTitre {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    background: transparent;
+}
+#navBouton {
+    background: transparent;
+    color: #dce9f8;
+    border: none;
+    border-radius: 12px;
+    text-align: left;
+    padding: 0px 12px;
+    font-size: 12px;
+}
+#navBouton:hover {
+    background: rgba(157, 199, 247, 60);
+}
+#navBouton:checked {
+    background: rgba(157, 199, 247, 90);
+    color: white;
+    font-weight: 600;
+}
+/* Icônes du header*/
+#boutonNotif, #boutonUtilisateur {
+    background: #edf6ff;
+    border: 1px solid #b4d6fc;
+    border-radius: 18px;
+}
+#boutonNotif:hover, #boutonUtilisateur:hover {
+    background: #b4d6fc;
+}
+#header #headerTitre {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e4069;
+}
+#header #headerSousTitre {
+    font-size: 12px;
+    font-weight: 400;
+    color: #6d8fb5;
+}
+/* Pagination */
+#pagination {
+    background: transparent;
+}
+#pagination QLabel {
+    color: #6d8fb5;
+    background: transparent;
+}
+#pageBouton, #pageFleche {
+    background: transparent;
+    color: #1e4069;
+    border: none;
+    border-radius: 16px;
+    font-size: 12px;
+}
+#pageBouton:hover, #pageFleche:hover {
+    background: #b4d6fc;
+}
+#pageBouton:checked {
+    background: #1e4069;
+    color: white;
+    font-weight: 600;
+}
+#pageFleche:disabled {
+    color: #9db9d8;
+}
+/* ===== Barre de défilement ===== */
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 4px 2px 4px 2px;
+}
+QScrollBar::handle:vertical {
+    background: #9dc7f7;
+    border-radius: 3px;
+    min-height: 40px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #35649b;
+}
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    border: none;
+    background: none;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
+    background: transparent;
+}
+/* Badges de statut sur les cartes */
+#labelStatut {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+#labelStatut[statut="disponible"] {
+    background: #e1f5fe;
+    color: #0288d1;
+}
+
+#labelStatut[statut="loue"] {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+#labelStatut[statut="maintenance"] {
+    background: #ffebee;
+    color: #d32f2f;
+}
+/*style du menu*/
+QMenu {
+    background: #f4f9fc;
+    color: #1e4069;
+    border: 1px solid #b4d6fc;
+    border-radius: 8px;
+    padding: 4px;
+}
+QMenu::item {
+    padding: 6px 18px;
+    border-radius: 6px;
+}
+QMenu::item:selected {
+    background: #b4d6fc;
+}
+/* bouton supprimer désactivé */
+#boutonSupprimer:disabled {
+    background: #b4d6fc;
+    color: #6d8fb5;
+}
+
+/* liste déroulante des filtres */
+#sidebar QComboBox {
+    background: #edf6ff;
+    color: #1e4069;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+}
+#sidebar QComboBox::drop-down {
+    border: none;
+    width: 26px;
+    background: transparent;
+}
+#sidebar QComboBox::down-arrow {
+    image: url(://images/fleche_bas.png);
+    width: 12px;
+    height: 12px;
+}
+#sidebar QComboBox QAbstractItemView {
+    background: #f4f9fc;
+    color: #1e4069;
+    selection-background-color: #b4d6fc;
+    selection-color: #1e4069;
+}
