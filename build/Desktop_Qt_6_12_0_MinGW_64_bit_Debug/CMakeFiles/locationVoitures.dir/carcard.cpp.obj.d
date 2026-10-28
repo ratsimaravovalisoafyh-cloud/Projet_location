@@ -1,10 +1,10 @@
 CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:\qt\locationVoitures\Projet_location\carcard.cpp \
  D:\qt\locationVoitures\Projet_location\carcard.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/QObject \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qglobal.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -152,6 +152,13 @@ CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/qtresource.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qttranslation.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qversiontagging.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcompare.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstdlibdetection.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcomparehelpers.h \
@@ -223,6 +230,8 @@ CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstring.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qchar.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qbytearray.h \
@@ -323,16 +332,6 @@ CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qmargins.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcheckedint_impl.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q23utility.h \
@@ -388,12 +387,14 @@ CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtGui/qbitmap.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QString \
  D:/baba/6.12.0/mingw_64/include/QtGui/QPixmap \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QSize \
  D:\qt\locationVoitures\Projet_location\voiture.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QVBoxLayout \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qboxlayout.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qlayout.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qlayoutitem.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qgridlayout.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QLabel \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qlabel.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qframe.h \
@@ -404,16 +405,36 @@ CMakeFiles/locationVoitures.dir/carcard.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QPushButton \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qpushbutton.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractbutton.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
  D:/baba/6.12.0/mingw_64/include/QtGui/QIcon \
- D:/baba/6.12.0/mingw_64/include/QtGui/QPainterPath \
- D:/baba/6.12.0/mingw_64/include/QtGui/qpainterpath.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/QPainter \
- D:/baba/6.12.0/mingw_64/include/QtGui/qpainter.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtextoption.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qpen.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/QImage \
- D:/baba/6.12.0/mingw_64/include/QtCore/QRect \
+ D:/baba/6.12.0/mingw_64/include/QtGui/QImageReader \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qimagereader.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcoreapplication.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcoreevent.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qbasictimer.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qeventloop.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qnativeinterface.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qimageiohandler.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qplugin.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qpointer.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qjsonobject.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcborvalue.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcborcommon.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qdatetime.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcalendar.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qlocale.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/quuid.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qjsondocument.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/q20algorithm.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qfactoryinterface.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QMenu \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qmenu.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/QAction
+ D:/baba/6.12.0/mingw_64/include/QtGui/QAction \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QHash \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QtMath

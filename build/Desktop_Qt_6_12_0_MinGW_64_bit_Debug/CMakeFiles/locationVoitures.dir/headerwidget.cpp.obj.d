@@ -420,6 +420,6 @@ CMakeFiles/locationVoitures.dir/headerwidget.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QPushButton \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QVBoxLayout \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QLabel \
- D:/baba/6.12.0/mingw_64/include/QtGui/QIcon \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QVBoxLayout
+ D:/baba/6.12.0/mingw_64/include/QtGui/QIcon

@@ -385,6 +385,7 @@ CMakeFiles/locationVoitures.dir/toolbar.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qcursor.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qbitmap.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QString \
  D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/locationVoitures_autogen/include/ui_toolbar.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QVariant \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QApplication \
@@ -430,8 +431,10 @@ CMakeFiles/locationVoitures.dir/toolbar.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtGui/qpen.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qtextoption.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QLineEdit \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
  D:/baba/6.12.0/mingw_64/include/QtGui/QIcon \
  D:/baba/6.12.0/mingw_64/include/QtGui/QPixmap \
  D:/baba/6.12.0/mingw_64/include/QtGui/QPainter \
- D:/baba/6.12.0/mingw_64/include/QtGui/qpainter.h
+ D:/baba/6.12.0/mingw_64/include/QtGui/qpainter.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/QColor

@@ -231,9 +231,9 @@ font-weight: 700;
 }
 
 #carteImage {
-    background: #ffffff;
-    border-radius: 12px;
-    color: #6d8fb5;
+    background: #eef3f9;
+    border-radius: 10px;
+    color: #8aa0b8;
 }
 
 /* coeur favoris */

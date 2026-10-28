@@ -158,9 +158,7 @@ D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debu
   D:/baba/6.12.0/mingw_64/include/QtGui/qtransform.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/QButtonGroup \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qbuttongroup.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \

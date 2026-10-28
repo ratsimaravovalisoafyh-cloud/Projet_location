@@ -2,10 +2,10 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:\qt\locationVoitures\Projet_location\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\locationVoitures_autogen\mocs_compilation.cpp \
  D:\qt\locationVoitures\Projet_location\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\locationVoitures_autogen\EWIEGA46WW/moc_carcard.cpp \
  D:/qt/locationVoitures/Projet_location/carcard.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/QObject \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qglobal.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -153,6 +153,13 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:/baba/6.12.0/mingw_64/include/QtCore/qtresource.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qttranslation.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qversiontagging.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcompare.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstdlibdetection.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcomparehelpers.h \
@@ -224,6 +231,8 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstring.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qchar.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qbytearray.h \
@@ -324,16 +333,6 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QWidget \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qmargins.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcheckedint_impl.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q23utility.h \
@@ -389,6 +388,7 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:/baba/6.12.0/mingw_64/include/QtGui/qbitmap.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QString \
  D:/baba/6.12.0/mingw_64/include/QtGui/QPixmap \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QSize \
  D:/qt/locationVoitures/Projet_location/voiture.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qtmochelpers.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qtmocconstants.h \
@@ -397,14 +397,12 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:/qt/locationVoitures/Projet_location/headerwidget.h \
  D:\qt\locationVoitures\Projet_location\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\locationVoitures_autogen\EWIEGA46WW/moc_mainwindow.cpp \
  D:/qt/locationVoitures/Projet_location/mainwindow.h \
- D:/qt/locationVoitures/Projet_location/role.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QList \
  D:/baba/6.12.0/mingw_64/include/QtCore/QStringList \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QButtonGroup \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qbuttongroup.h \
+ D:/qt/locationVoitures/Projet_location/role.h \
  D:/qt/locationVoitures/Projet_location/voiturerepository.h \
  D:\qt\locationVoitures\Projet_location\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\locationVoitures_autogen\EWIEGA46WW/moc_navbar.cpp \
  D:/qt/locationVoitures/Projet_location/navbar.h \
@@ -413,19 +411,4 @@ CMakeFiles/locationVoitures.dir/locationVoitures_autogen/mocs_compilation.cpp.ob
  D:\qt\locationVoitures\Projet_location\build\Desktop_Qt_6_12_0_MinGW_64_bit_Debug\locationVoitures_autogen\EWIEGA46WW/moc_voituredialog.cpp \
  D:/qt/locationVoitures/Projet_location/voituredialog.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialog \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialog.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qlocale.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qvalidator.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qslider.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qframe.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialog.h

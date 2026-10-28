@@ -1,7 +1,6 @@
 CMakeFiles/locationVoitures.dir/main.cpp.obj: \
  D:\qt\locationVoitures\Projet_location\main.cpp \
  D:\qt\locationVoitures\Projet_location\mainwindow.h \
- D:\qt\locationVoitures\Projet_location\role.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QMainWindow \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -391,8 +390,7 @@ CMakeFiles/locationVoitures.dir/main.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/QList \
  D:/baba/6.12.0/mingw_64/include/QtCore/QString \
  D:/baba/6.12.0/mingw_64/include/QtCore/QStringList \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QButtonGroup \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qbuttongroup.h \
+ D:\qt\locationVoitures\Projet_location\role.h \
  D:\qt\locationVoitures\Projet_location\voiture.h \
  D:\qt\locationVoitures\Projet_location\voiturerepository.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QApplication \
@@ -443,7 +441,7 @@ CMakeFiles/locationVoitures.dir/main.cpp.obj: \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/QStyleHints \
- D:/baba/6.12.0/mingw_64/include/QtGui/qstylehints.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QFileSystemWatcher \
- D:/baba/6.12.0/mingw_64/include/QtCore/qfilesystemwatcher.h
+ D:/baba/6.12.0/mingw_64/include/QtCore/qfilesystemwatcher.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/QStyleHints \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qstylehints.h

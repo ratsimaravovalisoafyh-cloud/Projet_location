@@ -295,5 +295,5 @@ CMakeFiles/locationVoitures.dir/voiturerepository.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/qalgorithms.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q20bit.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstringmatcher.h \
- D:\qt\locationVoitures\Projet_location\voiture.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/QString
+ D:/baba/6.12.0/mingw_64/include/QtCore/QString \
+ D:\qt\locationVoitures\Projet_location\voiture.h

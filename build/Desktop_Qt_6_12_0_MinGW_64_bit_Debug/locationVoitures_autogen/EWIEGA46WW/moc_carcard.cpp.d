@@ -1,6 +1,6 @@
 D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/locationVoitures_autogen/EWIEGA46WW/moc_carcard.cpp: D:/qt/locationVoitures/Projet_location/carcard.h \
   D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/locationVoitures_autogen/moc_predefs.h \
-  D:/baba/6.12.0/mingw_64/include/QtCore/QObject \
+  D:/baba/6.12.0/mingw_64/include/QtCore/QSize \
   D:/baba/6.12.0/mingw_64/include/QtCore/QString \
   D:/baba/6.12.0/mingw_64/include/QtCore/q17memory.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/q20bit.h \

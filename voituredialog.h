@@ -1,14 +1,18 @@
 #ifndef VOITUREDIALOG_H
 #define VOITUREDIALOG_H
-#include"voiture.h"
+
 #include <QDialog>
 #include <QString>
-#include <QComboBox>
+#include "voiture.h"
+
+class QLabel;
+class QComboBox;
+
 namespace Ui {
 class VoitureDialog;
-
 }
 
+// la fenêtre pour ajouter une voiture ou modifier une voiture existante
 class VoitureDialog : public QDialog
 {
     Q_OBJECT
@@ -16,18 +20,21 @@ class VoitureDialog : public QDialog
 public:
     explicit VoitureDialog(QWidget *parent = nullptr);
     ~VoitureDialog();
-    Voiture voiture() const;
-    void remplir(const Voiture &v);
+
+    Voiture voiture() const;               // lit le formulaire et renvoie la voiture
+    void remplir(const Voiture &v);        // remplit le formulaire (pour modifier)
+
+protected:
+    void accept() override;                // vérifie les champs obligatoires avant de fermer
 
 private:
+    void afficherApercu();                 // montre la photo choisie en petit
+
     Ui::VoitureDialog *ui;
-    int m_id = 0;
-    QString m_photo;
-    class QLabel *m_apercu = nullptr;
-    void afficherApercu();
-    QComboBox *m_comboStatut = nullptr;
-protected:
-    void accept() override;
+    int m_id = 0;                          // 0 pour une nouvelle voiture
+    QString m_photo;                       // chemin de la photo choisie
+    QLabel *m_apercu = nullptr;            // l'aperçu de la photo
+    QComboBox *m_comboStatut = nullptr;    // le choix du statut
 };
 
 #endif // VOITUREDIALOG_H

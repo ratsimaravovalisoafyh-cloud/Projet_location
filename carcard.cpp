@@ -1,47 +1,16 @@
 #include "carcard.h"
 #include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
-#include <QHBoxLayout>
 #include <QIcon>
-#include <QPainterPath>
-#include <QPainter>
 #include <QImage>
-#include <QRect>
+#include <QImageReader>
 #include <QMenu>
 #include <QAction>
-// enlève les marges blanches ou transparentes autour de la voiture
-/*static QPixmap rogner(const QPixmap &src)
-{
-    if (src.isNull())
-        return src;
-
-    QImage img = src.toImage().convertToFormat(QImage::Format_ARGB32);
-    int minX = img.width(), minY = img.height(), maxX = -1, maxY = -1;
-
-    for (int y = 0; y < img.height(); ++y) {
-        const QRgb *ligne = reinterpret_cast<const QRgb *>(img.constScanLine(y));
-        for (int x = 0; x < img.width(); ++x) {
-            QRgb c = ligne[x];
-            bool vide = qAlpha(c) < 20
-                        || (qRed(c) > 245 && qGreen(c) > 245 && qBlue(c) > 245);
-            if (!vide) {
-                minX = qMin(minX, x);
-                maxX = qMax(maxX, x);
-                minY = qMin(minY, y);
-                maxY = qMax(maxY, y);
-            }
-        }
-    }
-    if (maxX < 0)
-        return src; //l'image est blanc
-
-    QRect zone(minX, minY, maxX - minX + 1, maxY - minY + 1);
-    const int marge = qMax(6, zone.width() / 50);
-    zone.adjust(-marge, -marge, marge, marge);
-    zone = zone.intersected(img.rect());
-    return src.copy(zone);
-}*/
+#include <QHash>
+#include <QtMath>
+#include <QSize>
 // enlève les marges blanches ou transparentes autour de la voiture
 static QPixmap rogner(const QPixmap &src)
 {
@@ -59,9 +28,9 @@ static QPixmap rogner(const QPixmap &src)
     for (int y = 0; y < img.height(); ++y) {
         const QRgb *ligne = reinterpret_cast<const QRgb *>(img.constScanLine(y));
         for (int x = 0; x < img.width(); ++x) {
-            QRgb c = ligne[x];
-            bool vide = qAlpha(c) < 20
-                        || (qRed(c) > 245 && qGreen(c) > 245 && qBlue(c) > 245);
+            const QRgb c = ligne[x];
+            const bool vide = qAlpha(c) < 20
+                              || (qRed(c) > 245 && qGreen(c) > 245 && qBlue(c) > 245);
             if (!vide) {
                 minX = qMin(minX, x);
                 maxX = qMax(maxX, x);
@@ -94,30 +63,57 @@ static QPixmap chargerPhoto(const QString &chemin)
     if (it != cache.constEnd())
         return it.value();
 
-    QPixmap pm = rogner(QPixmap(chemin));
-    if (pm.width() > 600)                 // 600 px suffisent pour une carte de 260 px, même en haute densité
-        pm = pm.scaledToWidth(600, Qt::SmoothTransformation);
+    QPixmap pm;                           // reste vide si pas de photo
+    if (!chemin.isEmpty()) {
+        QImageReader lecteur(chemin);
+        lecteur.setAutoTransform(true);
+        const QSize taille = lecteur.size();
+        if (taille.width() > 600)         // 600 px suffisent pour une carte de 260 px, même en haute densité
+            lecteur.setScaledSize(QSize(600, qRound(600.0 * taille.height() / taille.width())));
+        const QImage img = lecteur.read();
+        if (!img.isNull())
+            pm = rogner(QPixmap::fromImage(img));
+    }
     cache.insert(chemin, pm);
     return pm;
 }
-CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const QString &prix ,const QString &immatriculation,int id, const QString &photo, QWidget *parent, bool admin)
+
+CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const QString &prix,
+                 const QString &immatriculation, int id, const QString &photo, QWidget *parent, bool admin)
     : QWidget{parent}
 {
     m_id = id;
-    //creation de la carte
-    QVBoxLayout *Layout = new QVBoxLayout(this);
-    Layout->setContentsMargins(16,16,16,16);
-    Layout->setSpacing(10);
-    QLabel *labelnom = new QLabel(nom);
-    QLabel *labeltype = new QLabel(type);
-    QLabel *labelprix = new QLabel(prix);
+
+    // tous les widgets reçoivent "this" comme parent dès leur création :
+    // sans cela, chaque rattachement par un layout refait le calcul du style (très lent)
+    QLabel *labelnom   = new QLabel(nom, this);
+    QLabel *labeltype  = new QLabel(type, this);
+    QLabel *labelprix  = new QLabel(prix, this);
+    QLabel *labelimmat = new QLabel(immatriculation, this);
+    QLabel *labelimage = new QLabel("Aucune photo", this);
     labelprix->setToolTip("Prix par jour");
-    QLabel *labelimage = new QLabel("image");
-    QLabel *labelimmat = new QLabel(immatriculation);
+
+    // noms utilisés par le QSS
+    setObjectName("carte");
+    labelnom->setObjectName("carteNom");
+    labeltype->setObjectName("carteType");
+    labelimmat->setObjectName("carteImmat");
+    labelprix->setObjectName("cartePrix");
+    labelimage->setObjectName("carteImage");
+
+    // photo
+    m_image = labelimage;
+    m_source = chargerPhoto(photo);
+    labelimage->setAlignment(Qt::AlignCenter);
+    labelimage->setFixedHeight(120);
+
+    setAttribute(Qt::WA_StyledBackground, true);
+    setMinimumWidth(260);
+    setFixedHeight(300);
 
     // badge de statut cliquable
-    QPushButton *boutonstatut = new QPushButton(texteStatut(statut));
-    boutonstatut->setObjectName("labelStatut");              // même nom : le QSS actuel continue de fonctionner
+    QPushButton *boutonstatut = new QPushButton(texteStatut(statut), this);
+    boutonstatut->setObjectName("labelStatut");
     boutonstatut->setProperty("statut", cleStatut(statut));
     boutonstatut->setCursor(Qt::PointingHandCursor);
     boutonstatut->setToolTip("Cliquer pour changer le statut");
@@ -136,43 +132,46 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
         menu.exec(boutonstatut->mapToGlobal(QPoint(0, boutonstatut->height())));
     });
 
-    //style des cartes
-    labelnom->setObjectName("carteNom");
-    labeltype->setObjectName("carteType");
-    labelimmat->setObjectName("carteImmat");
-    labelprix->setObjectName("cartePrix");
-    labelimage->setObjectName("carteImage");
-    m_image = labelimage;
-   // m_source = rogner(QPixmap(photo));
-    m_source = chargerPhoto(photo);      // vide si pas de photo    // vide si pas de photo
-    setObjectName("carte");
-    labelimage->setAlignment(Qt::AlignCenter);
-    labelimage->setFixedHeight(120);
-    setAttribute(Qt::WA_StyledBackground, true);
-    setMinimumWidth(260);
-    setFixedHeight(300);
-
-    // bouton pour favoris
-    QPushButton *boutonfavoris = new QPushButton;
+    // bouton favoris (l'icône n'est chargée qu'une seule fois pour toutes les cartes)
+    QPushButton *boutonfavoris = new QPushButton(this);
     boutonfavoris->setCheckable(true);
-
-    QIcon iconefavori;
-    iconefavori.addFile("://images/favoris.png", QSize(), QIcon::Normal, QIcon::Off);
-    iconefavori.addFile("://images/favoris2.png", QSize(), QIcon::Normal, QIcon::On);
+    static const QIcon iconefavori = [] {
+        QIcon i;
+        i.addFile("://images/favoris.png",  QSize(), QIcon::Normal, QIcon::Off);
+        i.addFile("://images/favoris2.png", QSize(), QIcon::Normal, QIcon::On);
+        return i;
+    }();
     boutonfavoris->setIcon(iconefavori);
-    boutonfavoris->setIconSize(QSize(18,18));
-    boutonfavoris->setFixedSize(32,32);
+    boutonfavoris->setIconSize(QSize(18, 18));
+    boutonfavoris->setFixedSize(32, 32);
     boutonfavoris->setObjectName("boutonFavori");
-    //l'immatriculation et le badge sont sur la même ligne
+
+    // boutons modifier / supprimer (réservés à l'administrateur)
+    QPushButton *boutonmodifier  = new QPushButton("Modifier", this);
+    QPushButton *boutonsupprimer = new QPushButton("Supprimer", this);
+    boutonmodifier->setObjectName("boutonModifier");
+    boutonsupprimer->setObjectName("boutonSupprimer");
+    boutonmodifier->setVisible(admin);
+    boutonsupprimer->setVisible(admin);
+
+    // on ne peut supprimer qu'une voiture disponible
+    if (statut != Statut::Disponible) {
+        boutonsupprimer->setEnabled(false);
+        boutonsupprimer->setToolTip("Impossible de supprimer une voiture louée ou en maintenance");
+    }
+    connect(boutonmodifier,  &QPushButton::clicked, this, [this]() { emit modifierDemande(m_id); });
+    connect(boutonsupprimer, &QPushButton::clicked, this, [this]() { emit supprimerDemande(m_id); });
+
+    // mise en page : immatriculation + badge sur la même ligne
     QHBoxLayout *ligneimmat = new QHBoxLayout;
-    ligneimmat->setContentsMargins(0,0,0,0);
+    ligneimmat->setContentsMargins(0, 0, 0, 0);
     ligneimmat->setSpacing(8);
     ligneimmat->addWidget(labelimmat);
     ligneimmat->addWidget(boutonstatut);
     ligneimmat->addStretch();
 
     QVBoxLayout *texte = new QVBoxLayout;
-    texte->setContentsMargins(0,0,0,0);
+    texte->setContentsMargins(0, 0, 0, 0);
     texte->setSpacing(2);
     texte->addWidget(labelnom);
     texte->addWidget(labeltype);
@@ -182,36 +181,23 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
     haut->addLayout(texte);
     haut->addStretch();
     haut->addWidget(boutonfavoris, 0, Qt::AlignTop);
-    Layout->addLayout(haut);
-    Layout->addWidget(labelimage);
-    QPushButton *boutonmodifier = new QPushButton("Modifier");
-    QPushButton *boutonsupprimer = new QPushButton("Supprimer");
-    boutonmodifier->setVisible(admin);
-    boutonsupprimer->setVisible(admin);
 
-    //supprimer au'une voiiture disponible
-    if (statut != Statut::Disponible) {
-        boutonsupprimer->setEnabled(false);
-        boutonsupprimer->setToolTip("Impossible de supprimer une voiture louée ou en maintenance");
-    }
-
-    connect(boutonmodifier, &QPushButton::clicked, this, [this]() { emit modifierDemande(m_id); });
-    connect(boutonsupprimer, &QPushButton::clicked, this, [this]() { emit supprimerDemande(m_id); });
-    boutonmodifier->setObjectName("boutonModifier");
-    boutonsupprimer->setObjectName("boutonSupprimer");
     QHBoxLayout *bas = new QHBoxLayout;
     bas->addWidget(labelprix);
     bas->addStretch();
     bas->addWidget(boutonmodifier);
     bas->addWidget(boutonsupprimer);
-    Layout->addLayout(bas);
+
+    QVBoxLayout *principal = new QVBoxLayout(this);
+    principal->setContentsMargins(16, 16, 16, 16);
+    principal->setSpacing(10);
+    principal->addLayout(haut);
+    principal->addWidget(labelimage);
+    principal->addLayout(bas);
 
     majImage();
-
-
-
-
 }
+
 void CarCard::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
@@ -221,14 +207,17 @@ void CarCard::resizeEvent(QResizeEvent *event)
 void CarCard::majImage()
 {
     if (!m_image || m_source.isNull())
-        return;                         // on garde le mot "image"
+        return;                           // on garde le texte "Aucune photo"
+
+    // inutile de redimensionner l'image si la taille n'a pas changé
+    const QSize cible(qMax(10, width() - 32), m_image->height());
+    if (cible == m_derniereTaille)
+        return;
+    m_derniereTaille = cible;
 
     const qreal dpr = devicePixelRatioF();
-    const int w = qMax(10, width() - 32);
-    const int h = m_image->height();
-
-    QPixmap mise = m_source.scaled(QSize(qRound(w * dpr), qRound(h * dpr)),
+    QPixmap mise = m_source.scaled(QSize(qRound(cible.width() * dpr), qRound(cible.height() * dpr)),
                                    Qt::KeepAspectRatio, Qt::SmoothTransformation);
     mise.setDevicePixelRatio(dpr);
-    m_image->setPixmap(mise);           // le label centre l'image
+    m_image->setPixmap(mise);             // le label centre l'image
 }

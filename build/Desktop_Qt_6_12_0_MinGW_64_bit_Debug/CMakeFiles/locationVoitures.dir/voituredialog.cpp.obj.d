@@ -1,10 +1,10 @@
 CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:\qt\locationVoitures\Projet_location\voituredialog.cpp \
  D:\qt\locationVoitures\Projet_location\voituredialog.h \
- D:\qt\locationVoitures\Projet_location\voiture.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/QString \
- D:/baba/6.12.0/mingw_64/include/QtCore/qstring.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qchar.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialog \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialog.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qglobal.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -152,6 +152,14 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/qtresource.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qttranslation.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qversiontagging.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcompare.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstdlibdetection.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcomparehelpers.h \
@@ -182,22 +190,14 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
- D:/baba/6.12.0/mingw_64/include/QtCore/qbytearray.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qrefcount.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qnamespace.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qtmetamacros.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qarraydata.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qpair.h \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/string.h \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qarraydatapointer.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qarraydataops.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qcontainertools_impl.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qxptype_traits.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/q23type_traits.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
@@ -208,17 +208,8 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_stat64.h \
  D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/swprintf.inl \
  D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/locale.h \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdio.h \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
- D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
@@ -236,6 +227,39 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_compat.h \
  D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_unistd.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qstring.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qchar.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qbytearray.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qrefcount.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qarraydata.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qpair.h \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/string.h \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qarraydatapointer.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qarraydataops.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qcontainertools_impl.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qxptype_traits.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/q23type_traits.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/locale.h \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdio.h \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
+ D:/baba/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h \
+ D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
@@ -254,17 +278,6 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
  D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
- D:/baba/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q20functional.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q20memory.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/q17memory.h \
@@ -283,21 +296,6 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstringbuilder.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstringconverter.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qstringconverter_base.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialog \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialog.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtgui-config.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qwidget.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qobject.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qlist.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qhashfunctions.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/qbitarray.h \
@@ -388,22 +386,8 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qcursor.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qbitmap.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qlocale.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
- D:/baba/6.12.0/mingw_64/include/QtGui/qvalidator.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qslider.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
- D:/baba/6.12.0/mingw_64/include/QtWidgets/qframe.h \
- D:/baba/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/QString \
+ D:\qt\locationVoitures\Projet_location\voiture.h \
  D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debug/locationVoitures_autogen/include/ui_voituredialog.h \
  D:/baba/6.12.0/mingw_64/include/QtCore/QVariant \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QAbstractButton \
@@ -420,8 +404,23 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qguiapplication.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qinputmethod.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qlocale.h \
  D:/baba/6.12.0/mingw_64/include/QtGui/qguiapplication_platform.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ D:/baba/6.12.0/mingw_64/include/QtGui/qvalidator.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qslider.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/qframe.h \
+ D:/baba/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialog \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialogButtonBox \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
@@ -492,6 +491,7 @@ CMakeFiles/locationVoitures.dir/voituredialog.cpp.obj: \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QPushButton \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/qpushbutton.h \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QLabel \
+ D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
  D:/baba/6.12.0/mingw_64/include/QtWidgets/QHBoxLayout \
  D:/baba/6.12.0/mingw_64/include/QtCore/QDir \
  D:/baba/6.12.0/mingw_64/include/QtCore/QFile \

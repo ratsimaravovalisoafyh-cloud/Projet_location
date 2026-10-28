@@ -2,39 +2,41 @@
 #include "ui_headerwidget.h"
 #include <QPushButton>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QLabel>
 #include <QIcon>
-#include <QVBoxLayout>
 
 HeaderWidget::HeaderWidget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::HeaderWidget)
 {
     ui->setupUi(this);
+
+    // le bouton "Ajouter une voiture" avec son icône
     connect(ui->boutonAjouter, &QPushButton::clicked, this, &HeaderWidget::ajouterDemande);
-    ui->boutonAjouter->setIcon(QIcon("://images/addcircle.png"));// icone pour ajouter
+    ui->boutonAjouter->setIcon(QIcon("://images/addcircle.png"));
     ui->boutonAjouter->setIconSize(QSize(14, 14));
 
-    // mettre rent a car
+    // on cache le label "Rent a Car" qui vient du .ui (il est déjà dans la barre de navigation)
     const auto labels = findChildren<QLabel *>();
     for (QLabel *l : labels)
         if (l->text().compare("rent a car", Qt::CaseInsensitive) == 0)
             l->hide();
 
-    // Cloche de notification
-    QPushButton *notif = new QPushButton;
+    // la cloche de notifications
+    QPushButton *notif = new QPushButton(this);
     notif->setObjectName("boutonNotif");
     notif->setFixedSize(36, 36);
-    notif->setIcon(QIcon("://images/notif.png"));//icon de notif
+    notif->setIcon(QIcon("://images/notif.png"));
     notif->setIconSize(QSize(20, 20));
     notif->setCursor(Qt::PointingHandCursor);
     notif->setToolTip("Notifications");
 
-    // Utilisateur
-    QPushButton *utilisateur = new QPushButton;
+    // le bouton du compte utilisateur
+    QPushButton *utilisateur = new QPushButton(this);
     utilisateur->setObjectName("boutonUtilisateur");
     utilisateur->setFixedSize(36, 36);
-    utilisateur->setIcon(QIcon("://images/profil.png")); // utilisateurs icon
+    utilisateur->setIcon(QIcon("://images/profil.png"));
     utilisateur->setIconSize(QSize(20, 20));
     utilisateur->setCursor(Qt::PointingHandCursor);
     utilisateur->setToolTip("Mon compte");
@@ -42,12 +44,11 @@ HeaderWidget::HeaderWidget(QWidget *parent)
     connect(notif, &QPushButton::clicked, this, &HeaderWidget::notificationsDemandees);
     connect(utilisateur, &QPushButton::clicked, this, &HeaderWidget::profilDemande);
 
-    //co;pleter le vide sideral
+    // on remplit le vide à gauche avec le titre, et on place les boutons avant "Ajouter"
     if (auto *h = qobject_cast<QHBoxLayout *>(layout())) {
-        // Titre de la page, à gauche
-        QLabel *titre = new QLabel("Véhicules");
+        QLabel *titre = new QLabel("Véhicules", this);
         titre->setObjectName("headerTitre");
-        QLabel *sousTitre = new QLabel("Gérez vos voitures proprement");
+        QLabel *sousTitre = new QLabel("Gérez vos voitures proprement", this);
         sousTitre->setObjectName("headerSousTitre");
 
         QVBoxLayout *blocTitre = new QVBoxLayout;
@@ -55,20 +56,22 @@ HeaderWidget::HeaderWidget(QWidget *parent)
         blocTitre->setContentsMargins(0, 0, 0, 0);
         blocTitre->addWidget(titre);
         blocTitre->addWidget(sousTitre);
-        h->insertLayout(0, blocTitre);
+        h->insertLayout(0, blocTitre);               // le titre tout à gauche
 
         int pos = h->indexOf(ui->boutonAjouter);
-        h->insertWidget(pos, notif);
+        h->insertWidget(pos, notif);                 // cloche juste avant "Ajouter"
         h->insertWidget(pos + 1, utilisateur);
         h->setSpacing(12);
     }
-
 }
-//pour ajouter le bouton quand c'est admin
-void HeaderWidget::setPeutAjouter(bool peut){
+
+// le bouton Ajouter n'est visible que pour l'admin
+void HeaderWidget::setPeutAjouter(bool peut)
+{
     ui->boutonAjouter->setVisible(peut);
 }
-    HeaderWidget::~HeaderWidget()
+
+HeaderWidget::~HeaderWidget()
 {
     delete ui;
 }

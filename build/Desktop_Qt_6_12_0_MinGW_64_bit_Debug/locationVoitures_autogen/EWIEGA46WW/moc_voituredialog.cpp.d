@@ -10,7 +10,6 @@ D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debu
   D:/baba/6.12.0/mingw_64/include/QtCore/q20utility.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/q23type_traits.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/q23utility.h \
-  D:/baba/6.12.0/mingw_64/include/QtCore/qabstractitemmodel.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qalgorithms.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qalloc.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qanystringview.h \
@@ -60,7 +59,6 @@ D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debu
   D:/baba/6.12.0/mingw_64/include/QtCore/qlatin1stringview.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qline.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qlist.h \
-  D:/baba/6.12.0/mingw_64/include/QtCore/qlocale.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qlogging.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qmalloc.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qmap.h \
@@ -81,7 +79,6 @@ D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debu
   D:/baba/6.12.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qrect.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qrefcount.h \
-  D:/baba/6.12.0/mingw_64/include/QtCore/qregularexpression.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qscopedpointer.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qscopeguard.h \
   D:/baba/6.12.0/mingw_64/include/QtCore/qset.h \
@@ -157,24 +154,11 @@ D:/qt/locationVoitures/Projet_location/build/Desktop_Qt_6_12_0_MinGW_64_bit_Debu
   D:/baba/6.12.0/mingw_64/include/QtGui/qtguiexports.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qtguiglobal.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qtransform.h \
-  D:/baba/6.12.0/mingw_64/include/QtGui/qvalidator.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/baba/6.12.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/QComboBox \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/QDialog \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractslider.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qcombobox.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qdialog.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qframe.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qrubberband.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qsizepolicy.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qslider.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyle.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qstyleoption.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabbar.h \
-  D:/baba/6.12.0/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/baba/6.12.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
