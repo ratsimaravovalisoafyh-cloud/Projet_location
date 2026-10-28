@@ -25,7 +25,7 @@
 #include "voituredialog.h"
 #include "navbar.h"
 
-MainWindow::MainWindow(Role role, QWidget *parent)   // on reçoit le rôle (admin ou employé)
+MainWindow::MainWindow(Role role, QWidget *parent) //pour recevoir le rôle admin ou employé
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
@@ -37,13 +37,13 @@ MainWindow::MainWindow(Role role, QWidget *parent)   // on reçoit le rôle (adm
     setCentralWidget(central);
     central->setObjectName("centrale");
 
-    // à gauche la barre de navigation, à droite le contenu
+    // à gauche la barre de navigation et à droite le contenu
     QHBoxLayout *racine = new QHBoxLayout(central);
     racine->setContentsMargins(0, 0, 0, 0);
     racine->setSpacing(0);
 
     NavBar *nav = new NavBar;
-    nav->setDashboardVisible(m_role == Role::Admin);   // l'employé ne voit pas le Dashboard
+    nav->setDashboardVisible(m_role == Role::Admin); // l'employé ne verra pas le Dashboard
     racine->addWidget(nav);
 
     QWidget *contenu = new QWidget;
@@ -53,11 +53,11 @@ MainWindow::MainWindow(Role role, QWidget *parent)   // on reçoit le rôle (adm
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
 
-    // le header (titre, bouton ajouter...)
+    // le header
     HeaderWidget *header = new HeaderWidget;
     header->setAttribute(Qt::WA_StyledBackground, true);
     header->setObjectName("header");
-    header->setPeutAjouter(m_role == Role::Admin);   // seul l'admin peut ajouter
+    header->setPeutAjouter(m_role == Role::Admin); // seul l'admin peut ajouter une voiture
     layout->addWidget(header);
 
     // le bouton "Ajouter une voiture"
@@ -77,7 +77,7 @@ MainWindow::MainWindow(Role role, QWidget *parent)   // on reçoit le rôle (adm
         }
     });
 
-    // la barre d'outils (recherche + tri)
+    // la barre d'outils
     toolbar *barre = new toolbar;
     barre->setAttribute(Qt::WA_StyledBackground, true);
     barre->setObjectName("barre");

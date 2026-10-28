@@ -19,26 +19,26 @@ VoitureDialog::VoitureDialog(QWidget *parent)
 {
     ui->setupUi(this);
     setObjectName("dialogVoiture");
-    setAttribute(Qt::WA_StyledBackground, true);   // pour que le fond du QSS s'affiche
+    setAttribute(Qt::WA_StyledBackground, true); // pour que le fond du QSS s'affiche
     setWindowTitle("Ajouter une voiture");    // remplacé par "Modifier la voiture" dans remplir()
     // on peut choisir une marque de la liste ou en taper une nouvelle
     ui->comboMarque->setEditable(true);
     ui->comboMarque->setInsertPolicy(QComboBox::NoInsert);
 
 
-    // le champ du statut (disponible, loué, en maintenance)
+    // le champ du statut
     m_comboStatut = new QComboBox(this);
     for (Statut s : {Statut::Disponible, Statut::Loue, Statut::Maintenance})
         m_comboStatut->addItem(texteStatut(s), static_cast<int>(s));
     ui->formLayout->addRow("Statut :", m_comboStatut);
 
-    // le champ de la photo : un bouton et un petit aperçu à côté
+    // le champ de la photo
     m_apercu = new QLabel("Aucune", this);
     m_apercu->setFixedSize(96, 60);
     m_apercu->setAlignment(Qt::AlignCenter);
 
     QPushButton *choisir = new QPushButton("Choisir une photo...", this);
-    choisir->setAutoDefault(false);   // Entrée ne doit pas ouvrir le choix de photo
+    choisir->setAutoDefault(false);  // Entrée ne doit pas ouvrir le choix de photo
 
     QHBoxLayout *ligne = new QHBoxLayout;
     ligne->addWidget(choisir);
@@ -54,12 +54,10 @@ VoitureDialog::VoitureDialog(QWidget *parent)
         if (source.isEmpty())
             return;
 
-        // nom unique pour que deux photos ne s'écrasent jamais
+        // nom unique pour que deux photos ne s'écrasent pas
         QString dossier = QCoreApplication::applicationDirPath() + "/photos";
         QDir().mkpath(dossier);
-        QString dest = dossier + "/"
-                       + QUuid::createUuid().toString(QUuid::WithoutBraces)
-                       + "." + QFileInfo(source).suffix().toLower();
+        QString dest = dossier + "/" + QUuid::createUuid().toString(QUuid::WithoutBraces) + "." + QFileInfo(source).suffix().toLower();
         if (!QFile::copy(source, dest)) {
             QMessageBox::warning(this, "Photo", "Impossible de copier l'image.");
             return;
@@ -85,7 +83,7 @@ Voiture VoitureDialog::voiture() const
     return v;
 }
 
-// on vérifie les champs obligatoires avant de fermer avec OK
+//vérifie les champs obligatoires avant de fermer avec OK
 void VoitureDialog::accept()
 {
     if (ui->lineNom->text().trimmed().isEmpty()) {
@@ -108,10 +106,10 @@ void VoitureDialog::accept()
         ui->spinPrix->setFocus();
         return;
     }
-    QDialog::accept();   // tout est bon, on ferme
+    QDialog::accept();
 }
 
-// on remplit le formulaire avec une voiture existante (pour la modifier)
+//remplit le formulaire d'une voiture existante (pour la modifier)
 void VoitureDialog::remplir(const Voiture &v)
 {
     m_id = v.id;
@@ -136,8 +134,7 @@ void VoitureDialog::afficherApercu()
         m_apercu->setText("Aucune");
         return;
     }
-    m_apercu->setPixmap(pm.scaled(m_apercu->size(), Qt::KeepAspectRatio,
-                                  Qt::SmoothTransformation));
+    m_apercu->setPixmap(pm.scaled(m_apercu->size(), Qt::KeepAspectRatio,  Qt::SmoothTransformation));
 }
 
 VoitureDialog::~VoitureDialog()

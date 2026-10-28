@@ -24,7 +24,7 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-// la fenêtre principale : la page des véhicules (filtres, cartes, pagination)
+// la page des véhicules (filtres, cartes, pagination)
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -34,45 +34,46 @@ public:
     ~MainWindow() override;
 
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) override;   // pour replacer les cartes quand la taille change
+    // pour replace les cartes quand la taille change
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    // la fenêtre et son rôle
+    // la fenêtre avec le rôle
     Ui::MainWindow *ui;
     Role m_role = Role::Admin;
 
-    // les données
-    VoitureRepository m_repo;      // la liste des voitures
-    QList<Voiture> m_voitures;     // copie de la liste affichée
-    QList<CarCard *> m_cartes;     // une carte par voiture, dans le même ordre
+    // les données avec la liste des voitures
+    VoitureRepository m_repo;
+    QList<Voiture> m_voitures; // copie de la liste affichée
+    QList<CarCard *> m_cartes; // fais en sorte qu'il y ait une carte par voiture, dans le même ordre
 
-    // la grille des cartes
+    // la grille pour les cartes
     QWidget *m_catalogue = nullptr;
     QGridLayout *m_cataloglayout = nullptr;
     QScrollArea *m_scroll = nullptr;
-    int m_colonnes = 0;            // nombre de colonnes actuel (0 = à recalculer)
-    void mettreCartes();           // recrée toutes les cartes
-    void placerCartes();           // range les cartes dans la grille
-    void filtrer();                // cache les cartes qui ne passent pas les filtres
+    int m_colonnes = 0;
+    void mettreCartes();
+    void placerCartes();
+    void filtrer();
 
     // les filtres et le tri
-    QString m_transmission;        // vide = toutes
-    int m_statut = -1;             // -1 = tous les statuts
-    QStringList m_marques;         // vide = toutes les marques
+    QString m_transmission;
+    int m_statut = -1; //pour tous les status
+    QStringList m_marques;
     int m_prixmin = 0;
     int m_prixmax = 500000;
     QString m_recherche;
-    int m_tri = 0;                 // 0 = recommandé, 1 = prix croissant, 2 = prix décroissant
+    int m_tri = 0; // 0 pour recommandé, 1 pour prix croissant, 2 pour prix décroissant
 
-    // les marques dans la colonne des filtres
+    // les marques dans la partie des filtres
     QVBoxLayout *m_marqueslayout = nullptr;
     QButtonGroup *m_marquegroupe = nullptr;
     QCheckBox *m_totalmarque = nullptr;
     void rafraichirMarques();
 
     // la pagination
-    int m_page = 0;                // page actuelle (0 = première)
-    int m_parPage = 6;             // nombre de voitures par page
+    int m_page = 0; // page actuelle (0 = première)
+    int m_parPage = 6;
     QWidget *m_pagination = nullptr;
     QHBoxLayout *m_paginationLayout = nullptr;
     void majPagination(int pages);

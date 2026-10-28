@@ -8,7 +8,7 @@ namespace Ui {
 class toolbar;
 }
 
-// la barre sous le header : la recherche et le choix du tri
+//  la recherche et le choix du tri
 class toolbar : public QWidget
 {
     Q_OBJECT
@@ -18,9 +18,9 @@ public:
     ~toolbar();
 
 signals:
-    void rechercheChange(const QString &texte);   // le texte de la recherche a changé
-    void triChange(int index);                    // le tri a changé (0 recommandé, 1 prix croissant, 2 prix décroissant)
-
+    void rechercheChange(const QString &texte);
+    void triChange(int index);
+// le tri change 0 recommandé, 1 prix croissant, 2 prix décroissant
 private:
     Ui::toolbar *ui;
 };

@@ -5,26 +5,25 @@
 #include <QString>
 #include "voiture.h"
 
-// la liste des voitures : on y ajoute, modifie, supprime et cherche
-// (pour l'instant tout est gardé en mémoire, rien n'est enregistré dans un fichier)
+// la liste des voitures:ajouter,modifier,supprimer et chercher
 class VoitureRepository
 {
 public:
     VoitureRepository();
 
-    QList<Voiture> toutes() const;                    // toutes les voitures
-    int ajouter(Voiture v);                           // ajoute une voiture et renvoie son nouvel id
-    bool modifier(const Voiture &v);                  // remplace la voiture qui a le même id
-    bool supprimer(int id);                           // supprime la voiture avec cet id
-    bool changerStatut(int id, Statut statut);        // change seulement le statut
+    QList<Voiture> toutes() const; // toutes les voitures
+    int ajouter(Voiture v);
+    bool modifier(const Voiture &v);
+    bool supprimer(int id);
+    bool changerStatut(int id, Statut statut);
 
-    // vrai si une voiture a déjà cette immatriculation
-    // (ignorerId = la voiture qu'on est en train de modifier, pour ne pas la comparer à elle-même)
-    bool existenceimmatriculation(const QString &immat, int ignorerId = -1) const;
+    // le boleen indique vrai si une voiture a déjà cette immatriculation
+
+    bool existenceimmatriculation(const QString &immat, int ignorerId = -1) const; // (ignorerId = la voiture qu'on est en train de modifier pour ne pas la comparer à elle-même)
 
 private:
     QList<Voiture> m_liste;
-    int m_nextId = 1;                                 // l'id donné à la prochaine voiture ajoutée
+    int m_nextId = 1; // l'id que l'on va donné à la prochaine voiture ajoutée
 };
 
 #endif // VOITUREREPOSITORY_H

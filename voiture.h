@@ -3,14 +3,14 @@
 
 #include <QString>
 
-// l'état d'une voiture
+// l'état de la voiture
 enum class Statut {
     Disponible  = 0,
     Loue        = 1,
     Maintenance = 2,
 };
 
-// le texte affiché à l'écran (badge, filtre, liste du dialogue)
+// badge, filtre, liste du dialogue afficher a l'ecran
 inline QString texteStatut(Statut s)
 {
     switch (s) {
@@ -32,7 +32,7 @@ inline QString cleStatut(Statut s)
     return {};
 }
 
-// toutes les infos d'une voiture
+// informations de la  voiture
 struct Voiture {
     int id = 0;
     Statut statut = Statut::Disponible;
@@ -41,12 +41,12 @@ struct Voiture {
     QString marque;
     QString type;
     QString transmission;
-    double prix = 0.0;          // prix par jour
-    QString photo;              // chemin de l'image (vide s'il n'y en a pas)
+    double prix = 0.0;
+    QString photo;
 
     Voiture() = default;
 
-    // pratique pour écrire une voiture avec des accolades : {Statut::Loue, "Ford", ...}
+    // pour faire ne sorte que les accolades soit trouve quand on met une nouvelle voiture  {Statut::Loue, "Ford", ...}
     Voiture(Statut p_statut, const QString &p_nom, const QString &p_immat, const QString &p_marque,
             const QString &p_type, const QString &p_trans, double p_prix, const QString &p_photo,
             int p_id = 0)

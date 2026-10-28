@@ -1,6 +1,6 @@
 #include "voiturerepository.h"
 
-// au démarrage on met quelques voitures de test
+// au démarrage il y a les  quelques voitures de test
 VoitureRepository::VoitureRepository()
 {
     ajouter({Statut::Disponible,  "Mercedes-Benz",  "1234 TAB",  "Toyota",  "Berline",       "Automatique", 180000, ":/images/mercedes benz berline.jpg"});
@@ -23,7 +23,7 @@ QList<Voiture> VoitureRepository::toutes() const
     return m_liste;
 }
 
-// on ajoute une voiture et on lui donne un nouvel id (on le renvoie)
+// on ajoute une voiture et on lui donne un nouvel id
 int VoitureRepository::ajouter(Voiture v)
 {
     v.id = m_nextId++;
@@ -31,7 +31,7 @@ int VoitureRepository::ajouter(Voiture v)
     return v.id;
 }
 
-// on remplace la voiture qui a le même id (false si elle n'existe pas)
+// on remplace la voiture qui a le même id
 bool VoitureRepository::modifier(const Voiture &v)
 {
     for (int i = 0; i < m_liste.size(); ++i) {
@@ -43,7 +43,7 @@ bool VoitureRepository::modifier(const Voiture &v)
     return false;
 }
 
-// on supprime la voiture avec cet id (false si elle n'existe pas)
+// on supprime la voiture avec cet id
 bool VoitureRepository::supprimer(int id)
 {
     for (int i = 0; i < m_liste.size(); ++i) {
@@ -66,7 +66,7 @@ bool VoitureRepository::existenceimmatriculation(const QString &immat, int ignor
     return false;
 }
 
-// on change seulement le statut d'une voiture (false si elle n'existe pas)
+// on change seulement le statut d'une voiture
 bool VoitureRepository::changerStatut(int id, Statut statut)
 {
     for (int i = 0; i < m_liste.size(); ++i) {

@@ -12,18 +12,18 @@ HeaderWidget::HeaderWidget(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // le bouton "Ajouter une voiture" avec son icône
+    // le bouton ajouter
     connect(ui->boutonAjouter, &QPushButton::clicked, this, &HeaderWidget::ajouterDemande);
     ui->boutonAjouter->setIcon(QIcon("://images/addcircle.png"));
     ui->boutonAjouter->setIconSize(QSize(14, 14));
 
-    // on cache le label "Rent a Car" qui vient du .ui (il est déjà dans la barre de navigation)
+    // je cache le label "Rent a Car" qui vient du .ui sinon il apparait 2 fois
     const auto labels = findChildren<QLabel *>();
     for (QLabel *l : labels)
         if (l->text().compare("rent a car", Qt::CaseInsensitive) == 0)
             l->hide();
 
-    // la cloche de notifications
+    //  notifications
     QPushButton *notif = new QPushButton(this);
     notif->setObjectName("boutonNotif");
     notif->setFixedSize(36, 36);
@@ -44,7 +44,7 @@ HeaderWidget::HeaderWidget(QWidget *parent)
     connect(notif, &QPushButton::clicked, this, &HeaderWidget::notificationsDemandees);
     connect(utilisateur, &QPushButton::clicked, this, &HeaderWidget::profilDemande);
 
-    // on remplit le vide à gauche avec le titre, et on place les boutons avant "Ajouter"
+    // positionnement des differents objets
     if (auto *h = qobject_cast<QHBoxLayout *>(layout())) {
         QLabel *titre = new QLabel("Véhicules", this);
         titre->setObjectName("headerTitre");
@@ -56,10 +56,10 @@ HeaderWidget::HeaderWidget(QWidget *parent)
         blocTitre->setContentsMargins(0, 0, 0, 0);
         blocTitre->addWidget(titre);
         blocTitre->addWidget(sousTitre);
-        h->insertLayout(0, blocTitre);               // le titre tout à gauche
+        h->insertLayout(0, blocTitre); // le titre tout à gauche
 
         int pos = h->indexOf(ui->boutonAjouter);
-        h->insertWidget(pos, notif);                 // cloche juste avant "Ajouter"
+        h->insertWidget(pos, notif); // cloche juste avant "Ajouter"
         h->insertWidget(pos + 1, utilisateur);
         h->setSpacing(12);
     }

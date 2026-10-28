@@ -17,7 +17,7 @@ static QPixmap rogner(const QPixmap &src)
     if (src.isNull())
         return src;
 
-    // l'analyse se fait sur une petite copie (300 px de large) : beaucoup plus rapide
+    // plus de vitesse si on veu vite generer les images
     QImage img = src.toImage();
     const qreal echelle = img.width() > 300 ? 300.0 / img.width() : 1.0;
     if (echelle < 1.0)
@@ -40,14 +40,14 @@ static QPixmap rogner(const QPixmap &src)
         }
     }
     if (maxX < 0)
-        return src;                       // image entièrement blanche
+        return src;// rend l'image entièrement blanche en cas de
 
     QRect zone(minX, minY, maxX - minX + 1, maxY - minY + 1);
     const int marge = qMax(2, zone.width() / 50);
     zone.adjust(-marge, -marge, marge, marge);
     zone = zone.intersected(img.rect());
 
-    // on remet la zone à l'échelle de l'image d'origine
+    // on remet la zone au meme etat que  l'image d'origine
     if (echelle < 1.0)
         zone = QRect(qFloor(zone.x() / echelle), qFloor(zone.y() / echelle),
                      qCeil(zone.width() / echelle), qCeil(zone.height() / echelle));
@@ -55,7 +55,7 @@ static QPixmap rogner(const QPixmap &src)
     return src.copy(zone);
 }
 
-// charge une photo une seule fois : les cartes suivantes reprennent le résultat en mémoire
+// charge une photo une seule fois
 static QPixmap chargerPhoto(const QString &chemin)
 {
     static QHash<QString, QPixmap> cache;
@@ -63,12 +63,12 @@ static QPixmap chargerPhoto(const QString &chemin)
     if (it != cache.constEnd())
         return it.value();
 
-    QPixmap pm;                           // reste vide si pas de photo
+    QPixmap pm; // reste vide si pas de photo
     if (!chemin.isEmpty()) {
         QImageReader lecteur(chemin);
         lecteur.setAutoTransform(true);
         const QSize taille = lecteur.size();
-        if (taille.width() > 600)         // 600 px suffisent pour une carte de 260 px, même en haute densité
+        if (taille.width() > 600) // 600 px suffisent pour une carte de 260 px
             lecteur.setScaledSize(QSize(600, qRound(600.0 * taille.height() / taille.width())));
         const QImage img = lecteur.read();
         if (!img.isNull())
@@ -85,7 +85,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
     m_id = id;
 
     // tous les widgets reçoivent "this" comme parent dès leur création :
-    // sans cela, chaque rattachement par un layout refait le calcul du style (très lent)
+    // chaque rattachement par un layout refait le calcul du style sinon et ce sera très lent
     QLabel *labelnom   = new QLabel(nom, this);
     QLabel *labeltype  = new QLabel(type, this);
     QLabel *labelprix  = new QLabel(prix, this);
@@ -93,7 +93,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
     QLabel *labelimage = new QLabel("Aucune photo", this);
     labelprix->setToolTip("Prix par jour");
 
-    // noms utilisés par le QSS
+ //relier avec le Qss
     setObjectName("carte");
     labelnom->setObjectName("carteNom");
     labeltype->setObjectName("carteType");
@@ -123,7 +123,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
         for (Statut s : {Statut::Disponible, Statut::Loue, Statut::Maintenance}) {
             QAction *action = menu.addAction(texteStatut(s));
             action->setCheckable(true);
-            action->setChecked(s == statut);               // coche le statut actuel
+            action->setChecked(s == statut); // coche le statut actuel
             connect(action, &QAction::triggered, this, [this, s, statut]() {
                 if (s != statut)
                     emit statutDemande(m_id, s);
@@ -132,7 +132,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
         menu.exec(boutonstatut->mapToGlobal(QPoint(0, boutonstatut->height())));
     });
 
-    // bouton favoris (l'icône n'est chargée qu'une seule fois pour toutes les cartes)
+    // bouton favoris
     QPushButton *boutonfavoris = new QPushButton(this);
     boutonfavoris->setCheckable(true);
     static const QIcon iconefavori = [] {
@@ -146,7 +146,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
     boutonfavoris->setFixedSize(32, 32);
     boutonfavoris->setObjectName("boutonFavori");
 
-    // boutons modifier / supprimer (réservés à l'administrateur)
+    // boutons modifier et supprimer
     QPushButton *boutonmodifier  = new QPushButton("Modifier", this);
     QPushButton *boutonsupprimer = new QPushButton("Supprimer", this);
     boutonmodifier->setObjectName("boutonModifier");
@@ -162,7 +162,7 @@ CarCard::CarCard(Statut statut, const QString &nom, const QString &type, const Q
     connect(boutonmodifier,  &QPushButton::clicked, this, [this]() { emit modifierDemande(m_id); });
     connect(boutonsupprimer, &QPushButton::clicked, this, [this]() { emit supprimerDemande(m_id); });
 
-    // mise en page : immatriculation + badge sur la même ligne
+    // immatriculation et le badge sur la même ligne
     QHBoxLayout *ligneimmat = new QHBoxLayout;
     ligneimmat->setContentsMargins(0, 0, 0, 0);
     ligneimmat->setSpacing(8);
@@ -207,17 +207,16 @@ void CarCard::resizeEvent(QResizeEvent *event)
 void CarCard::majImage()
 {
     if (!m_image || m_source.isNull())
-        return;                           // on garde le texte "Aucune photo"
+        return;
 
-    // inutile de redimensionner l'image si la taille n'a pas changé
+    // permet de ne pas redimensionner l'image si la taille n'a pas changé
     const QSize cible(qMax(10, width() - 32), m_image->height());
     if (cible == m_derniereTaille)
         return;
     m_derniereTaille = cible;
 
     const qreal dpr = devicePixelRatioF();
-    QPixmap mise = m_source.scaled(QSize(qRound(cible.width() * dpr), qRound(cible.height() * dpr)),
-                                   Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QPixmap mise = m_source.scaled(QSize(qRound(cible.width() * dpr), qRound(cible.height() * dpr)),Qt::KeepAspectRatio, Qt::SmoothTransformation);
     mise.setDevicePixelRatio(dpr);
-    m_image->setPixmap(mise);             // le label centre l'image
+    m_image->setPixmap(mise); // le label va centrer l'image
 }

@@ -45,13 +45,13 @@ NavBar::NavBar(QWidget *parent)
     // chaque bouton a le nom de son icône et son texte
     struct Entree { const char *icone; const char *texte; };
     const Entree entrees[] = {
-                               {"icons-analytics-80", "Dashboard"},
-                               {"icons-car-80",       "Véhicules"},
-                               {"icons-group-80",     "Clients"},
-                               {"icons-schedule-80",  "Locations"},
-                               };
+               {"icons-analytics-80", "Dashboard"},
+               {"icons-car-80",       "Véhicules"},
+               {"icons-group-80",     "Clients"},
+               {"icons-schedule-80",  "Locations"},
+    };
 
-    int index = 0;   // l'index sert d'identifiant de page (0 = Dashboard, 1 = Véhicules...)
+    int index = 0; // l'index  va servir a identifier la page (0 = Dashboard, 1 = Véhicules...)
     for (const Entree &e : entrees) {
         QPushButton *b = new QPushButton(QString::fromUtf8(e.texte), this);
         b->setObjectName("navBouton");
@@ -63,10 +63,10 @@ NavBar::NavBar(QWidget *parent)
         groupe->addButton(b, index);
         layout->addWidget(b);
         if (index == 0)
-            m_boutonDashboard = b;   // on le garde pour pouvoir le cacher
+            m_boutonDashboard = b;// pour pouvoir le cacher en cas de connexion d'un employé
         ++index;
     }
-    groupe->button(1)->setChecked(true);   // "Véhicules" est la page actuelle
+    groupe->button(1)->setChecked(true);  //Véhicules est la page actuelle
     connect(groupe, &QButtonGroup::idClicked, this, &NavBar::pageDemandee);
 
     layout->addStretch();   // pousse les boutons vers le haut

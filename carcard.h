@@ -10,7 +10,7 @@
 class QLabel;
 class QResizeEvent;
 
-// une carte qui affiche une voiture (photo, nom, prix, statut, boutons)
+// la carte qui va afficher les voitures et les caracteristique (photo, nom, prix, statut, boutons)
 class CarCard : public QWidget
 {
     Q_OBJECT
@@ -20,20 +20,20 @@ public:
                      QWidget *parent = nullptr, bool admin = true);
 
 signals:
-    void modifierDemande(int id);                 // clic sur "Modifier"
-    void supprimerDemande(int id);                // clic sur "Supprimer"
-    void statutDemande(int id, Statut statut);    // on a choisi un nouveau statut dans le badge
+    void modifierDemande(int id);
+    void supprimerDemande(int id);
+    void statutDemande(int id, Statut statut);
 
 protected:
-    void resizeEvent(QResizeEvent *event) override;   // on redimensionne la photo avec la carte
+    void resizeEvent(QResizeEvent *event) override; // redimensionne la photo avec la carte
 
 private:
     void majImage();
 
-    int m_id = 0;                  // l'id de la voiture
-    QLabel *m_image = nullptr;     // le label qui montre la photo
-    QPixmap m_source;              // la photo d'origine, gardée pour la redimensionner
-    QSize m_derniereTaille;        // dernière taille de photo, pour ne pas refaire le travail pour rien
+    int m_id = 0; // l'id de la voiture
+    QLabel *m_image = nullptr; // le label qui montre la photo
+    QPixmap m_source;  // la photo de depart gardée pour la redimensionner
+    QSize m_derniereTaille; // dernière taille de photo, pour ne pas refaire le travail pour rien
 };
 
 #endif // CARCARD_H
