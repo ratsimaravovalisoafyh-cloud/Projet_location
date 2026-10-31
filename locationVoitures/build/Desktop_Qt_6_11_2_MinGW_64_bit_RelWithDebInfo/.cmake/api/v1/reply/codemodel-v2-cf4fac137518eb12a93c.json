@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-1a7a799be64ddd242951.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "locationVoitures",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "locationVoitures::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-locationVoitures-RelWithDebInfo-cb6b784e7e33ccc6e11b.json",
+					"name" : "locationVoitures",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "locationVoitures_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-locationVoitures_autogen-RelWithDebInfo-d3ab8384ae48d4a2e2eb.json",
+					"name" : "locationVoitures_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "locationVoitures_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-locationVoitures_autogen_timestamp_deps-RelWithDebInfo-9cc60882ee367bcdabcf.json",
+					"name" : "locationVoitures_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/project/locationVoitures/build/Desktop_Qt_6_11_2_MinGW_64_bit_RelWithDebInfo",
+		"source" : "D:/project/locationVoitures"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

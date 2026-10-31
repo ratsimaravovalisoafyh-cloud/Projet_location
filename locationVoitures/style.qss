@@ -1,0 +1,403 @@
+/* LocationVoitures — palette bleu clair / bleu marine */
+QMainWindow, QWidget#centralwidget {
+    background-color: #EEF5FE;
+    color: #173A5E;
+    font-family: "Segoe UI";
+    font-size: 10pt;
+}
+
+QWidget#pageContent {
+    background-color: #EEF5FE;
+    color: #173A5E;
+}
+
+QWidget#headerWidget {
+    background-color: #D8E9FC;
+}
+
+QWidget#sidebar {
+    background-color: #183B5E;
+    color: #EAF3FE;
+}
+
+QLabel#titre {
+    color: #183B5E;
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+QLabel#historique {
+    color: #183B5E;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+QLabel#label {
+    color: #183B5E;
+    font-size: 17pt;
+    font-weight: 700;
+}
+
+QWidget#sidebar QPushButton {
+    color: #EAF3FE;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding: 11px 14px;
+    text-align: left;
+}
+
+QWidget#sidebar QPushButton:hover {
+    background-color: #285177;
+}
+
+QWidget#sidebar QPushButton:pressed {
+    background-color: #102F4E;
+}
+
+QWidget#sidebar QPushButton#btnLocations {
+    color: #173A5E;
+    background-color: #D7E9FC;
+    border-color: #D7E9FC;
+    font-weight: 700;
+}
+
+QPushButton {
+    color: #173A5E;
+    background-color: #E2EEFC;
+    border: 1px solid #BDD3EC;
+    border-radius: 8px;
+    padding: 9px 13px;
+}
+
+QPushButton:hover {
+    background-color: #D2E4F8;
+    border-color: #91B5DC;
+}
+
+QPushButton:pressed {
+    background-color: #BCD5F1;
+}
+
+QPushButton:disabled {
+    color: #8495A8;
+    background-color: #E8EDF3;
+    border-color: #D7E0EA;
+}
+
+
+QPushButton#btnNotif, QPushButton#btnUser {
+    border: 0;
+    border-radius: 50%;
+}
+
+QLabel#AuLabel, QLabel#Dulabel {
+    color: #183B5E;
+}
+
+
+
+QPushButton#btnNouvelleLocation {
+    color: #FFFFFF;
+    background-color: #24547E;
+    border: 1px solid #24547E;
+    border-radius: 9px;
+    padding: 11px 18px;
+    font-weight: 700;
+}
+
+QPushButton#btnNouvelleLocation:hover {
+    background-color: #316A9B;
+    border-color: #316A9B;
+}
+
+QLineEdit, QComboBox, QDateEdit {
+    color: #173A5E;
+    background-color: #FFFFFF;
+    border: 1px solid #B8CCE2;
+    border-radius: 7px;
+    padding: 7px 9px;
+    min-height: 20px;
+    selection-background-color: #9FC5EF;
+    selection-color: #173A5E;
+}
+
+QLineEdit:hover, QComboBox:hover, QDateEdit:hover {
+    border-color: #719BC4;
+}
+
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus {
+    border: 2px solid #4D83B4;
+}
+
+QComboBox::drop-down, QDateEdit::drop-down {
+    background-color: #E2EEFC;
+    border: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 24px;
+}
+
+QComboBox QAbstractItemView {
+    color: #173A5E;
+    background-color: #FFFFFF;
+    border: 1px solid #B8CCE2;
+    selection-background-color: #D7E9FC;
+    selection-color: #173A5E;
+    outline: 0;
+}
+
+QCheckBox {
+    color: #173A5E;
+    spacing: 7px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #8AA9C9;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #24547E;
+    border: 1px solid #24547E;
+}
+
+QTableView {
+    color: #173A5E;
+    background-color: #FFFFFF;
+    alternate-background-color: #F4F8FD;
+    gridline-color: #DFE8F2;
+    border: 1px solid #C8D8E9;
+    border-radius: 8px;
+    selection-background-color: #D7E9FC;
+    selection-color: #173A5E;
+    outline: 0;
+}
+
+QTableView::item {
+    padding: 7px;
+    border: none;
+}
+
+QTableView::item:hover {
+    background-color: #EAF3FE;
+}
+
+QHeaderView::section {
+    color: #173A5E;
+    background-color: #D8E9FC;
+    border: none;
+    border-bottom: 1px solid #BDD3EC;
+    padding: 9px 8px;
+    font-weight: 700;
+}
+
+QTableCornerButton::section {
+    background-color: #D8E9FC;
+    border: none;
+}
+
+QCalendarWidget QWidget {
+    color: #173A5E;
+    background-color: #FFFFFF;
+    alternate-background-color: #F2F7FD;
+}
+
+QCalendarWidget QToolButton {
+    color: #173A5E;
+    background-color: #E2EEFC;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: #D2E4F8;
+}
+
+QCalendarWidget QAbstractItemView:enabled {
+    color: #173A5E;
+    background-color: #FFFFFF;
+    selection-background-color: #24547E;
+    selection-color: #FFFFFF;
+}
+
+QToolTip {
+    color: #173A5E;
+    background-color: #F7FAFE;
+    border: 1px solid #9BB9D8;
+    padding: 5px;
+}
+
+QScrollBar:vertical {
+    background-color: #EEF5FE;
+    width: 10px;
+    margin: 2px;
+    border: none;
+}
+QScrollBar::handle:vertical {
+    background-color: #9BB9D8;
+    border-radius: 4px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #527FA9;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    border: none;
+}
+QScrollBar:horizontal {
+    background-color: #EEF5FE;
+    height: 10px;
+    margin: 2px;
+    border: none;
+}
+QScrollBar::handle:horizontal {
+    background-color: #9BB9D8;
+    border-radius: 4px;
+    min-width: 24px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: #527FA9;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+    border: none;
+}
+
+/* Fenêtre de facture : palette bleue de l'application */
+QDialog#factureForm {
+    background-color: #EEF5FE;
+    color: #173A5E;
+}
+
+QDialog#factureForm QFrame#headerWidget {
+    background-color: #183B5E;
+    border: 0;
+    border-radius: 12px;
+}
+
+QDialog#factureForm QFrame#headerWidget QLabel {
+    color: #FFFFFF;
+    background: transparent;
+    border: 0;
+}
+
+QDialog#factureForm QLabel#logo {
+    color: #FFFFFF;
+    font-size: 15pt;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#titre {
+    color: #FFFFFF;
+    font-size: 15pt;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#soustitre {
+    color: #D7E9FC;
+    font-size: 9pt;
+}
+
+QDialog#factureForm QLabel#numeroFacture {
+    color: #183B5E;
+    background-color: #D7E9FC;
+    border: 0;
+    border-radius: 16px;
+    padding: 6px 10px;
+    font-weight: 700;
+}
+
+QDialog#factureForm QFrame#infoWidget,
+QDialog#factureForm QFrame#datesWidget,
+QDialog#factureForm QFrame#montantWidget,
+QDialog#factureForm QFrame#qrWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #D3E1EF;
+    border-radius: 11px;
+}
+
+QDialog#factureForm QLabel#captionClient,
+QDialog#factureForm QLabel#captionVoiture,
+QDialog#factureForm QLabel#captionReferenceClient,
+QDialog#factureForm QLabel#captionReferenceLocation,
+QDialog#factureForm QLabel#captionDateDebut,
+QDialog#factureForm QLabel#captionDateFin,
+QDialog#factureForm QLabel#captionStatut,
+QDialog#factureForm QLabel#captionMontant {
+    color: #71869A;
+    background: transparent;
+    border: 0;
+    font-size: 8pt;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#labelClient,
+QDialog#factureForm QLabel#labelVoiture,
+QDialog#factureForm QLabel#labelReferenceClient,
+QDialog#factureForm QLabel#labelReferenceLocation,
+QDialog#factureForm QLabel#labelDateDebut,
+QDialog#factureForm QLabel#labelDateFin,
+QDialog#factureForm QLabel#labelStatut {
+    color: #193F63;
+    background: transparent;
+    border: 0;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+QDialog#factureForm QLabel#labelMontant {
+    color: #193F63;
+    background: transparent;
+    border: 0;
+    font-size: 17pt;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#labelQRTitre {
+    color: #193F63;
+    background: transparent;
+    border: 0;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#qrCodeLabel {
+    color: #71869A;
+    background-color: #F5F9FE;
+    border: 1px dashed #9DB7D1;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+QDialog#factureForm QLabel#labelQRNote {
+    color: #71869A;
+    background: transparent;
+    border: 0;
+    font-size: 9pt;
+}
+
+QDialog#factureForm QPushButton#btnFermer {
+    color: #193F63;
+    background-color: #FFFFFF;
+    border: 1px solid #9EB6CC;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+QDialog#factureForm QPushButton#btnTelechargerPdf {
+    color: #FFFFFF;
+    background-color: #24547E;
+    border: 1px solid #24547E;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+QDialog#factureForm QPushButton#btnTelechargerPdf:hover {
+    background-color: #316A9B;
+    border-color: #316A9B;
+}

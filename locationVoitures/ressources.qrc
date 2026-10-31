@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>assets/logo-remove-background.png</file>
+        <file>assets/icons/icons-analytics-80.png</file>
+        <file>assets/icons/icons-car-80.png</file>
+        <file>assets/icons/icons-client-80.png</file>
+        <file>assets/icons/icons-notification-80.png</file>
+        <file>assets/icons/icons-schedule-80.png</file>
+        <file>assets/icons/icons-user-80.png</file>
+    </qresource>
+</RCC>
