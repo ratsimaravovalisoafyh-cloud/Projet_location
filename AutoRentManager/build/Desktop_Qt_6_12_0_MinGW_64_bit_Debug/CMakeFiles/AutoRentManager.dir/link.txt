@@ -1,0 +1,3 @@
+C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\AutoRentManager.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\AutoRentManager.dir/objects.a @CMakeFiles\AutoRentManager.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\AutoRentManager.dir/objects.a -Wl,--no-whole-archive -o AutoRentManager.exe -Wl,--out-implib,libAutoRentManager.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\AutoRentManager.dir\linkLibs.rsp
